@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 第一种去重
+        var str = ['a','b','a','c','d'];
+        var temp = [];
+        for(i in str){
+            // console.log(temp.indexOf(str[i]))
+            if(temp.indexOf(str[i]) == -1){
+                temp.push(str[i]);
+            }
+        }
+        console.log(temp)
+
+        // 第二种去重
+        var arr = ['1','2','1','3','5','2'];
+        function repeats1(arr){
+            var arr1 = [];
+            for(var i=0;i<arr.length;i++){
+                if (arr1.indexOf(arr[i]) == -1) {
+                    arr1.push(arr[i]);
+                }
+            }
+            return arr1;
+        }
+        console.log(repeats1(arr));
+    </script>
+</body>
+</html>
